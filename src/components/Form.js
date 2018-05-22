@@ -26,6 +26,7 @@ class Form extends Component {
   };
 
   componentDidMount = () => {
+    window.addEventListener('paste', this.validate);
     axios.get(nodesURL).then(result => {
       if (result && result.data && result.data.length > 0) {
         const data = result.data.filter(({ online }) => online === '1').map(({ host }) => host);
@@ -35,6 +36,10 @@ class Form extends Component {
       }
     });
   };
+
+  componentWillUnmount() {
+    window.removeEventListener('paste', this.validate);
+  }
 
   changeMode = mode => {
     this.setState({ showSideKeyInpit: mode === 'restricted' });
@@ -68,12 +73,12 @@ class Form extends Component {
   };
 
   handleAutocomplete = value => {
-    this.setState({ providerValue: value });
+    this.setState({ providerValue: value, providerError: false });
     this.filter(value);
   };
 
   handleChange = value => {
-    this.setState({ providerValue: value });
+    this.setState({ providerValue: value, providerError: false });
     this.filter(value);
   };
 

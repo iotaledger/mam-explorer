@@ -12,7 +12,7 @@ List of available nodes/providers is automatically loaded from the [public sourc
 Default mode is `public`, you can change it to `restricted` or `private`.
 `Restricted` mode will require an `encryption key`.
 
-### Test
+### Examples
 
 #### Public message stream:
 
