@@ -1,0 +1,25 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  background-color: rgb(241, 241, 241);
+  padding: 10px;
+  width: 100%;
+  font-size: 14px;
+  color: rgb(100, 100, 100);
+
+  a {
+    text-decoration: none;
+
+    &:visited {
+      color: rgb(100, 100, 100);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .footer {
+    padding: 5px;
+    font-size: 12px;
+  }
+}

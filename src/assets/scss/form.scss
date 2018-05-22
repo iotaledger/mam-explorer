@@ -1,0 +1,101 @@
+.formWrapper {
+  .md-menu--select-field {
+    width: 100%;
+    margin: 0;
+  }
+
+  form {
+    input {
+      margin-top: 40px;
+      font-size: 18px;
+      font-weight: 700;
+      padding-left: 10px;
+    }
+
+    .md-divider {
+      background-color: rgb(151, 151, 151);
+    }
+
+    .md-floating-label {
+      color: rgb(63, 63, 63);
+      font-size: 16px;
+      font-weight: 400;
+      padding-left: 0;
+    }
+
+    .md-layover {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+
+      &#mode-menu {
+        border-bottom: 1px solid rgb(151, 151, 151);
+      }
+
+      .md-select-field--btn {
+        color: rgb(63, 63, 63);
+        font-size: 18px;
+        font-weight: 700;
+        padding-left: 10px;
+      }
+
+      .md-icon-separator {
+        padding-right: 0;
+        margin-top: 28px;
+      }
+
+      div.md-text--error {
+        position: relative;
+        top: 23px;
+      }
+    }
+
+    div.md-text--disabled,
+    div.md-text-field-message--inactive {
+      height: 0;
+    }
+
+    .md-tile-content {
+      .md-text {
+        color: rgb(63, 63, 63);
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .cta {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    button.md-btn {
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-align: center;
+      cursor: pointer;
+      overflow: hidden;
+      white-space: nowrap;
+      display: inline-block;
+      color: #fff;
+      background: linear-gradient(90deg, #18817c, #22b1ab);
+      width: 40%;
+      margin-top: 20px;
+      font-size: 22px;
+      padding: 30px 10px;
+      line-height: 2px;
+      border-radius: 45px;
+
+      &.md-text--disabled {
+        background: rgb(200, 200, 200);
+        cursor: default;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .formWrapper .cta button.md-btn {
+    width: 80%;
+  }
+}

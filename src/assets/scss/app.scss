@@ -1,0 +1,49 @@
+@import 'globals';
+
+@include react-md-everything;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+div,
+span,
+p,
+label,
+input,
+select,
+button {
+  font-family: "Nunito Sans", serif;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.content {
+  max-width: 1092px;
+  width: 100%;
+  margin: 20px auto 50px;
+}
+
+.panel {
+  margin-top: 50px;
+}
+
+.loaderWrapper {
+  margin-top: 20px;
+}
+
+@media (max-width: 1092px) {
+  .content {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .content {
+    margin-top: 0;
+    padding: 0 10px;
+  }
+}

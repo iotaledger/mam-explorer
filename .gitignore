@@ -1,0 +1,13 @@
+# dependencies
+/node_modules
+
+# build artifacts
+/dist
+
+# misc
+.DS_Store
+tests/__coverage__/
+
+/src/config.json
+
+*.log
