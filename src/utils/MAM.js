@@ -1,5 +1,5 @@
 import Mam from 'mam.client.js';
-import IOTA from 'iota.lib.js';
+import { trytesToAscii } from '@iota/converter'
 
 export const fetch = (
   provider,
@@ -12,10 +12,9 @@ export const fetch = (
   if (!provider || !root) return;
   const promise = new Promise(async (resolve, reject) => {
     try {
-      const iota = new IOTA({ provider });
-      Mam.init(iota);
+      Mam.init(provider);
       await Mam.fetch(root, mode, key, data => {
-        const event = JSON.parse(iota.utils.fromTrytes(data));
+        const event = JSON.parse(trytesToAscii(data));
         reportEvent(event);
       });
       return resolve(onFetchComplete());
