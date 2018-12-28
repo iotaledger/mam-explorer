@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ExpansionList, ExpansionPanel, Switch } from 'react-md';
 import MessageContent from './MessageContent';
-import 'assets/scss/app.scss';
+import '../assets/scss/app.scss';
 
 class List extends Component {
   state = {

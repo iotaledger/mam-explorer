@@ -7,7 +7,6 @@ import Loader from './Loader';
 import Header from './Header';
 import Footer from './Footer';
 import Form from './Form';
-import 'assets/scss/app.scss';
 
 class App extends Component {
   state = {
