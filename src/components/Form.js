@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import {
   Autocomplete,
   FocusContainer,
@@ -14,8 +13,6 @@ import knownNodes from '../knownNodes.json';
 
 const MODE = ['public', 'restricted', 'private'];
 
-const nodesURL = 'https://iotanode.host/node_table.json';
-
 class Form extends Component {
   state = {
     providerError: false,
@@ -27,14 +24,6 @@ class Form extends Component {
 
   componentDidMount = () => {
     window.addEventListener('paste', this.validate);
-    axios.get(nodesURL).then(result => {
-      if (result && result.data && result.data.length > 0) {
-        const data = result.data.filter(({ online }) => online === '1').map(({ host }) => host);
-        this.setState({
-          provider: [...this.state.provider, ...data],
-        });
-      }
-    });
   };
 
   componentWillUnmount() {
