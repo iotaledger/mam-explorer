@@ -17,8 +17,8 @@ class App extends Component {
   };
 
   componentDidMount = () => {
-    if (location.search) {
-      this.onSubmit(queryString.parse(location.search));
+    if (window.location.search) {
+      this.onSubmit(queryString.parse(window.location.search));
     }
   };
 
@@ -28,7 +28,7 @@ class App extends Component {
 
   generateQR = async (root, provider, mode, key = null) => {
     try {
-      let url = `${location.href}?provider=${provider}&mode=${mode}&root=${root}`;
+      let url = `${window.location.origin}/?provider=${provider}&mode=${mode}&root=${root}`;
       url = key ? `${url}&key=${key}` : url;
       return await QRCode.toDataURL(url);
     } catch (err) {
