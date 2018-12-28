@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import queryString from 'query-string';
+import QRCode from 'qrcode';
 import { fetch } from '../utils/MAM';
 import List from './List';
 import Loader from './Loader';
@@ -12,6 +13,7 @@ class App extends Component {
   state = {
     messages: [],
     showLoader: false,
+    qrcode: null
   };
 
   componentDidMount = () => {
@@ -24,17 +26,28 @@ class App extends Component {
 
   fetchComplete = () => this.setState({ showLoader: false });
 
-  onSubmit = ({ provider, root, mode, key }) => {
+  generateQR = async (root, provider, mode, key = null) => {
+    try {
+      let url = `${location.href}?provider=${provider}&mode=${mode}&root=${root}`;
+      url = key ? `${url}&key=${key}` : url;
+      return await QRCode.toDataURL(url);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  onSubmit = async ({ provider, root, mode, key }) => {
     if (this.state.showLoader) return;
-    this.setState({ showLoader: true, messages: [] });
+    const qrcode = await this.generateQR(root, provider, mode, key);
+    this.setState({ showLoader: true, messages: [], qrcode });
     fetch(provider, root, mode, key, this.appendToMessages, this.fetchComplete);
   };
 
   render() {
-    const { messages, showLoader } = this.state;
+    const { messages, showLoader, qrcode } = this.state;
     return (
       <div className="app">
-        <Header />
+        <Header qrcode={qrcode} />
         <div className="content">
           <Form onSubmit={this.onSubmit} showLoader={showLoader} />
           <div className={`loaderWrapper ${showLoader ? '' : 'hidden'}`}>

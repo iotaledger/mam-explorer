@@ -23,6 +23,16 @@
     display: flex;
     justify-content: center;
   }
+
+  .qr {
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      height: 100%;
+      width: 140px;
+    }
+  }
 }
 
 @media (max-width: 850px) and (min-width: 601px) {
@@ -35,6 +45,12 @@
 
     span {
       font-size: 24px;
+    }
+
+    .qr {
+      img {
+        width: 100px;
+      }
     }
   }
 }
@@ -49,6 +65,12 @@
 
     span {
       font-size: 18px;
+    }
+
+    .qr {
+      img {
+        width: 70px;
+      }
     }
   }
 }
