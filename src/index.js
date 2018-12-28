@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
 import WebFontLoader from 'webfontloader';
-import App from 'components/App';
+import './assets/scss/app.scss';
+import App from './components/App';
+import * as serviceWorker from './serviceWorker';
 
 WebFontLoader.load({
   google: {
@@ -10,22 +11,6 @@ WebFontLoader.load({
   },
 });
 
-const rootEl = document.getElementById('root');
+ReactDOM.render(<App />, document.getElementById('root'));
 
-const renderComponent = Component => {
-  ReactDOM.render(
-    <AppContainer>
-      <Component />
-    </AppContainer>,
-    rootEl
-  );
-};
-
-renderComponent(App);
-
-// Hot Module Replacement API
-if (module.hot) {
-  module.hot.accept('./components/App', () => {
-    renderComponent(App);
-  });
-}
+serviceWorker.unregister();
