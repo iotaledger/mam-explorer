@@ -19,14 +19,6 @@ Default mode is `public`, you can change it to `restricted` or `private`.
 
 Alternatively you can use [this link](https://mam-explorer.firebaseapp.com/?provider=https://nodes.devnet.thetangle.org:443&mode=public&root=WHQNXBDSFQJPZYIJDBNJAWYQDJFPCCSOJLWJWKPDQQZBCYBXPPSXGBV9WFGWRWVUTSADMEHBLKCTJT9FD)
 
-#### Restricted message stream:
-
-* Root: `9SQDTAJKXOLDJSXOYAMLMFKRDUCMFFPDPFNRLIBKAZMJJRKVCSPUCQBLTYNTJIYIJ9VXZLTYGP9DROLYB`
-* Provider: `https://nodes.devnet.thetangle.org:443`
-* Encryption Key: `VERY-SECRET-KEY`
-
-Alternatively you can use [this link](https://mam-explorer.firebaseapp.com/?provider=https://nodes.devnet.thetangle.org:443&mode=restricted&key=VERY-SECRET-KEY&root=9SQDTAJKXOLDJSXOYAMLMFKRDUCMFFPDPFNRLIBKAZMJJRKVCSPUCQBLTYNTJIYIJ9VXZLTYGP9DROLYB)
-
 ### For developers
 
 #### Installation
@@ -39,7 +31,7 @@ Alternatively you can use [this link](https://mam-explorer.firebaseapp.com/?prov
 `yarn start` or `npm run start`
 
 * Build app continously
-* App served @ `http://localhost:8080`
+* App served @ `http://localhost:3000`
 
 **Production**
 
@@ -51,12 +43,7 @@ then
 
 **All commands**
 
-| Command              | Description                                                             |
-| -------------------- | ----------------------------------------------------------------------- |
-| `npm run start-dev`  | Build app continously (HMR enabled) and serve @ `http://localhost:8080` |
-| `npm run start-prod` | Build app once (HMR disabled) and serve @ `http://localhost:3000`       |
-| `npm run build`      | Build app to `/dist/`                                                   |
-| `npm run lint`       | Run JavaScript and SASS linter                                          |
-| `npm run lint:js`    | Run JavaScript linter                                                   |
-| `npm run lint:sass`  | Run SASS linter                                                         |
-| `npm run start`      | (alias of `npm run start-dev`)                                          |
+| Command                          | Description                                                             |
+| -------------------------------- | ----------------------------------------------------------------------- |
+| `yarn start` or `npm run start`  | Build app continously (HMR enabled) and serve @ `http://localhost:3000` |
+| `yarn build` or `npm run build`  | Build app to `/build/`, prepare for deployment                           |                           

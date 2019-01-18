@@ -1,6 +1,6 @@
 [
-  "https://nodes.devnet.thetangle.org:443",
   "https://nodes.devnet.iota.org:443",
+  "https://nodes.devnet.thetangle.org:443",
   "https://testnet140.tangle.works",
   "https://node.tangle.works:443",
   "https://nodes.thetangle.org:443",
@@ -8,5 +8,6 @@
   "http://iota.bitfinex.com:80",
   "http://eugene.iota.community:14265",
   "http://wallets.iotamexico.com:80",
-  "http://mainnet.necropaz.com:14500"
+  "http://mainnet.necropaz.com:14500",
+  "https://altnodes.devnet.iota.org"
 ]
