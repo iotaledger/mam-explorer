@@ -8,5 +8,6 @@
   "http://iota.bitfinex.com:80",
   "http://eugene.iota.community:14265",
   "http://wallets.iotamexico.com:80",
-  "http://mainnet.necropaz.com:14500"
+  "http://mainnet.necropaz.com:14500",
+  "https://altnodes.devnet.iota.org"
 ]
