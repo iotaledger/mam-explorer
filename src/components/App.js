@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 import queryString from 'query-string';
 import QRCode from 'qrcode';
 import { fetch } from '../utils/MAM';
@@ -39,6 +40,11 @@ class App extends Component {
     if (this.state.showLoader) return;
     const qrcode = await this.generateQR(root, provider, mode, key);
     this.setState({ showLoader: true, messages: [], qrcode });
+    ReactGA.event({
+      category: 'Fetch',
+      action: 'MAM Fetch',
+      label: `Provider ${provider}, mode: ${mode}`
+    });
     fetch(provider, root, mode, key, this.appendToMessages, this.fetchComplete);
   };
 
