@@ -8,6 +8,4 @@
 # misc
 .DS_Store
 
-/src/config.json
-
 *.log
