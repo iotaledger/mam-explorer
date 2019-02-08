@@ -14,10 +14,18 @@ Default mode is `public`, you can change it to `restricted` or `private`.
 
 #### Public message stream:
 
-* Root: `WHQNXBDSFQJPZYIJDBNJAWYQDJFPCCSOJLWJWKPDQQZBCYBXPPSXGBV9WFGWRWVUTSADMEHBLKCTJT9FD`
-* Provider: `https://nodes.devnet.thetangle.org:443`
+* Root: `QNXYZJDSMPARTLNRBZYTAPDWNZPFRVYTQNMSZCTDIFBBMXHWRAOHLYEVKIFSFBOYLA9PWXOFNGEQNTLMV`
+* Provider: `https://nodes.devnet.iota.org:443`
 
-Alternatively you can use [this link](https://mam-explorer.firebaseapp.com/?provider=https://nodes.devnet.thetangle.org:443&mode=public&root=WHQNXBDSFQJPZYIJDBNJAWYQDJFPCCSOJLWJWKPDQQZBCYBXPPSXGBV9WFGWRWVUTSADMEHBLKCTJT9FD)
+Alternatively you can use [this link](https://mam-explorer.firebaseapp.com/?provider=https://nodes.devnet.iota.org:443&mode=public&root=QNXYZJDSMPARTLNRBZYTAPDWNZPFRVYTQNMSZCTDIFBBMXHWRAOHLYEVKIFSFBOYLA9PWXOFNGEQNTLMV)
+
+#### Restricted message stream:
+
+* Root: `V9IHHZWYUVCQETYD9UFVWGDNFGQNCWAJ9XEOKHPQCBQHFZGQLJGMKYJ9IXPKFISFSGQYNVWNKPIBYQZLA`
+* Provider: `https://nodes.devnet.iota.org:443`
+
+Alternatively you can use [this link](https://mam-explorer.firebaseapp.com/?provider=https://nodes.devnet.iota.org&mode=restricted&key=VERYSECRETKEY99999999999999999999999999999999999999999999999999999999999999999999&root=V9IHHZWYUVCQETYD9UFVWGDNFGQNCWAJ9XEOKHPQCBQHFZGQLJGMKYJ9IXPKFISFSGQYNVWNKPIBYQZLA)
+
 
 ### For developers
 

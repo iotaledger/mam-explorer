@@ -7,7 +7,7 @@ export const fetch = (provider, root, mode, key, reportEvent, onFetchComplete) =
     try {
       Mam.init(provider);
       const convertAndReport = event => reportEvent(JSON.parse(trytesToAscii(event)))
-      await Mam.fetch(root, mode, key || '', convertAndReport);
+      await Mam.fetch(root, mode, key, convertAndReport);
       return resolve(onFetchComplete());
     } catch (error) {
       console.log('MAM fetch error', error);
