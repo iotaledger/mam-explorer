@@ -70,15 +70,10 @@
     justify-content: center;
 
     button.md-btn {
+      @include button();
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      text-align: center;
-      cursor: pointer;
-      overflow: hidden;
-      white-space: nowrap;
       display: inline-block;
-      color: #fff;
-      background: linear-gradient(90deg, #18817c, #22b1ab);
       width: 40%;
       margin-top: 20px;
       font-size: 22px;

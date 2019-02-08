@@ -2,11 +2,15 @@
   position: fixed;
   bottom: 0;
   text-align: center;
-  background-color: rgb(241, 241, 241);
+  background-color: #eeeeee;
   padding: 10px;
   width: 100%;
   font-size: 14px;
   color: rgb(100, 100, 100);
+
+  &.cookie-bar-bottom-bar {
+    bottom: 70px;
+  }
 
   a {
     text-decoration: none;

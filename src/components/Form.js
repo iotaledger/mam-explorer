@@ -8,7 +8,6 @@ import {
   CardActions,
   FontIcon,
 } from 'react-md';
-import '../assets/scss/form.scss';
 import knownNodes from '../knownNodes.json';
 
 const MODE = ['public', 'restricted', 'private'];

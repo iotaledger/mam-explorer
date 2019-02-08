@@ -1,0 +1,21 @@
+@mixin button($background-color:linear-gradient(90deg, #18817c, #22b1ab)) {
+  width: 200px;
+  height: 55px;
+  background: $background-color;
+  border-radius: 42px;
+  border: none;
+  font-weight: 600;
+  font-size: 19px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  outline: none;
+
+  &:hover {
+    text-decoration: none;
+    color:rgba(255, 255, 255, 0.7);
+  }
+}

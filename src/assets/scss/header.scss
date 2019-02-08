@@ -2,11 +2,8 @@
   height: 140px;
   display: flex;
   flex-direction: row;
-  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(rgb(123, 194, 195)), to(rgb(128, 133, 191)));
-  background-image: -webkit-linear-gradient(left, rgb(123, 194, 195), rgb(128, 133, 191));
-  background-image: -moz-linear-gradient(left, rgb(123, 194, 195), rgb(128, 133, 191));
-  background-image: -o-linear-gradient(left, rgb(123, 194, 195), rgb(128, 133, 191));
-
+  background-image: linear-gradient(to right, rgb(123, 194, 195), rgb(128, 133, 191));
+ 
   & > * {
     width: 33%;
   }
