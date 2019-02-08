@@ -19,6 +19,7 @@ class Form extends Component {
     showSideKeyInpit: false,
     filteredData: [],
     provider: [...knownNodes],
+    providerValue: knownNodes[0],
   };
 
   componentDidMount = () => {
