@@ -8,6 +8,7 @@ import Loader from './Loader';
 import Header from './Header';
 import Footer from './Footer';
 import Form from './Form';
+import Disclaimer from './Disclaimer';
 
 class App extends Component {
   state = {
@@ -60,6 +61,7 @@ class App extends Component {
           </div>
           {messages.length > 0 ? <List messages={messages} /> : null}
         </div>
+        <Disclaimer />
         <Footer />
       </div>
     );
