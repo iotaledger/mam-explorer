@@ -42,8 +42,8 @@ class App extends Component {
       action: 'MAM Fetch',
       label: `Provider ${provider}, mode: ${mode}`
     });
-    const message = await fetch(provider, root, mode, key);
-    this.setState({ messages: [...this.state.messages, message] });
+    const messages = await fetch(provider, root, mode, key);
+    this.setState({ messages });
     this.setState({ showLoader: false });
   };
 
