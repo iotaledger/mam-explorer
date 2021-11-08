@@ -23,10 +23,6 @@ class App extends Component {
     }
   };
 
-  appendToMessages = message => this.setState({ messages: [...this.state.messages, message] });
-
-  fetchComplete = () => this.setState({ showLoader: false });
-
   generateQR = async (root, provider, mode, key = null) => {
     try {
       let url = `${window.location.origin}/?provider=${provider}&mode=${mode}&root=${root}`;
@@ -35,7 +31,7 @@ class App extends Component {
     } catch (err) {
       console.error(err);
     }
-  }
+  };
 
   onSubmit = async ({ provider, root, mode, key }) => {
     if (this.state.showLoader) return;
@@ -46,7 +42,9 @@ class App extends Component {
       action: 'MAM Fetch',
       label: `Provider ${provider}, mode: ${mode}`
     });
-    fetch(provider, root, mode, key, this.appendToMessages, this.fetchComplete);
+    const message = await fetch(provider, root, mode, key);
+    this.setState({ messages: [...this.state.messages, message] });
+    this.setState({ showLoader: false });
   };
 
   render() {
