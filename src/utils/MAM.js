@@ -6,7 +6,6 @@ export const fetch = (provider, root, mode, key) => {
   const promise = new Promise(async (resolve, reject) => {
     try {
       const messages = await mamFetchAll(provider, root, mode, key);
-      console.log(messages);
       if (messages === undefined || messages === []) {
         return resolve([]);
       }
@@ -15,7 +14,6 @@ export const fetch = (provider, root, mode, key) => {
         const decodedMessage = decodeURIComponent(trytesToAscii(message.message));
         decodedMessages.push(JSON.parse(decodedMessage));
       });
-      console.log(decodedMessages);
       return resolve(decodedMessages);
     } catch (error) {
       console.log('MAM fetch error', error);

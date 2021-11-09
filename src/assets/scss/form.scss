@@ -1,29 +1,27 @@
 .formWrapper {
-  .md-menu--select-field {
+  .rmd-menu--select-field {
     width: 100%;
     margin: 0;
   }
 
   form {
-    input {
-      margin-top: 40px;
-      font-size: 18px;
-      font-weight: 700;
-      padding-left: 10px;
-    }
 
-    .md-divider {
+    .rmd-divider {
       background-color: rgb(151, 151, 151);
     }
 
-    .md-floating-label {
+    .rmd-text-field-container {
+      margin-top: 30px;
+    }
+
+    .rmd-floating-label {
       color: rgb(63, 63, 63);
       font-size: 16px;
       font-weight: 400;
       padding-left: 0;
     }
 
-    .md-layover {
+    .rmd-layover {
       width: 100%;
       margin: 0;
       padding: 0;
@@ -32,31 +30,31 @@
         border-bottom: 1px solid rgb(151, 151, 151);
       }
 
-      .md-select-field--btn {
+      .rmd-select-field--button {
         color: rgb(63, 63, 63);
         font-size: 18px;
         font-weight: 700;
         padding-left: 10px;
       }
 
-      .md-icon-separator {
+      .rmd-icon-separator {
         padding-right: 0;
         margin-top: 28px;
       }
 
-      div.md-text--error {
+      div.rmd-text--error {
         position: relative;
         top: 23px;
       }
     }
 
-    div.md-text--disabled,
-    div.md-text-field-message--inactive {
+    div.rmd-text--disabled,
+    div.rmd-text-field-message--inactive {
       height: 0;
     }
 
-    .md-tile-content {
-      .md-text {
+    .rmd-tile-content {
+      .rmd-text {
         color: rgb(63, 63, 63);
         font-size: 18px;
         font-weight: 700;
@@ -69,7 +67,7 @@
     flex-direction: row;
     justify-content: center;
 
-    button.md-btn {
+    button.rmd-button {
       @include button();
       letter-spacing: 1.5px;
       text-transform: uppercase;
@@ -81,7 +79,7 @@
       line-height: 2px;
       border-radius: 45px;
 
-      &.md-text--disabled {
+      &.rmd-text--disabled {
         background: rgb(200, 200, 200);
         cursor: default;
       }
@@ -90,7 +88,7 @@
 }
 
 @media (max-width: 500px) {
-  .formWrapper .cta button.md-btn {
+  .formWrapper .cta button.rmd-button {
     width: 80%;
   }
 }

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { ExpansionList, ExpansionPanel, Switch } from 'react-md';
+import { ExpansionPanel, Switch } from 'react-md';
 import MessageContent from './MessageContent';
 
 class List extends Component {
   state = {
     expanded: false,
-    expandedPanels: [],
+    expandedPanels: []
   };
 
   onExpandToggle = (toggleOpen, key) => {
@@ -31,13 +31,15 @@ class List extends Component {
     }
   };
 
-  toggleExpandedState = expanded => {
+  toggleExpandedState = (event) => {
+    const expanded = event.target.checked;
+    console.log(this.state);
     if (!expanded) {
       this.setState({ expanded, expandedPanels: [] });
     } else {
       this.setState({
         expanded,
-        expandedPanels: Array.from(new Array(this.props.messages.length), (x, i) => i),
+        expandedPanels: Array.from(new Array(this.props.messages.length), (x, i) => i)
       });
     }
   };
@@ -55,19 +57,18 @@ class List extends Component {
           checked={expanded}
           onChange={this.toggleExpandedState}
         />
-        <ExpansionList className="md-cell md-cell--12">
-          {messages.map((message, index) => (
-            <ExpansionPanel
-              key={index}
-              label={index}
-              footer={null}
-              expanded={this.state.expandedPanels.includes(index)}
-              onExpandToggle={toggleOpen => this.onExpandToggle(toggleOpen, index)}
-            >
-              <MessageContent message={message} />
-            </ExpansionPanel>
-          ))}
-        </ExpansionList>
+        {messages.map((message, index) => (
+          <ExpansionPanel
+            id={index.toString()}
+            key={index}
+            header={index}
+            footer={null}
+            expanded={this.state.expandedPanels.includes(index)}
+            onExpandClick={() => this.onExpandToggle(!this.state.expandedPanels.includes(index), index)}
+          >
+            <MessageContent message={message} />
+          </ExpansionPanel>
+        ))}
       </div>
     );
   }
