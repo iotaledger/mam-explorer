@@ -1,7 +1,7 @@
-@import 'globals';
+@use './everything' as *;
 @import 'components';
 
-@include react-md-everything;
+@include react-md-utils;
 
 @import './app';
 @import './header';

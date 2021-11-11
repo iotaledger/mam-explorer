@@ -1,0 +1,8 @@
+// Any variable overrides. The following just changes the default theme to use teal and purple.
+@use "@react-md/theme/dist/color-palette" as *;
+@forward "react-md" with
+  (
+    $rmd-theme-primary: $rmd-deep-purple-700,
+    $rmd-theme-secondary: $rmd-teal-700
+  );
+

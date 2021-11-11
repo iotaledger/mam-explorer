@@ -1,9 +1,11 @@
 import React from 'react';
 
-export default ({ showLoader }) => (
+const Loader = ({ showLoader }) => (
   <div className={`bouncing-loader ${showLoader ? 'visible' : ''}`}>
     <div />
     <div />
     <div />
   </div>
 );
+
+export default Loader;

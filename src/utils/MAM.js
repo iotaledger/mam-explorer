@@ -1,14 +1,20 @@
-import Mam from 'mam.client.js';
+import { mamFetchAll } from '@iota/mam.js';
 import { trytesToAscii } from '@iota/converter';
 
-export const fetch = (provider, root, mode, key, reportEvent, onFetchComplete) => {
+export const fetch = (provider, root, mode, key) => {
   if (!provider || !root) return;
   const promise = new Promise(async (resolve, reject) => {
     try {
-      Mam.init(provider);
-      const convertAndReport = event => reportEvent(JSON.parse(trytesToAscii(event)))
-      await Mam.fetch(root, mode, key, convertAndReport);
-      return resolve(onFetchComplete());
+      const messages = await mamFetchAll(provider, root, mode, key);
+      if (messages === undefined || messages === []) {
+        return resolve([]);
+      }
+      const decodedMessages = [];
+      messages.forEach((message) => {
+        const decodedMessage = decodeURIComponent(trytesToAscii(message.message));
+        decodedMessages.push(JSON.parse(decodedMessage));
+      });
+      return resolve(decodedMessages);
     } catch (error) {
       console.log('MAM fetch error', error);
       return reject();

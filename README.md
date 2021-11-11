@@ -14,17 +14,18 @@ Default mode is `public`, you can change it to `restricted` or `private`.
 
 #### Public message stream:
 
-* Root: `QNXYZJDSMPARTLNRBZYTAPDWNZPFRVYTQNMSZCTDIFBBMXHWRAOHLYEVKIFSFBOYLA9PWXOFNGEQNTLMV`
-* Provider: `https://nodes.devnet.iota.org:443`
+* Root: `YSTWK9RASUXFKNMYTCEJAIILZLBUXEETBOEOXRVQVZIHSTFZWYWJOICKODFCTCDPUKFMGJCTMADZUEIFW`
+* Provider: `https://api.lb-0.h.chrysalis-devnet.iota.cafe`
 
-Alternatively you can use [this link](https://mam-explorer.firebaseapp.com/?provider=https://nodes.devnet.iota.org:443&mode=public&root=QNXYZJDSMPARTLNRBZYTAPDWNZPFRVYTQNMSZCTDIFBBMXHWRAOHLYEVKIFSFBOYLA9PWXOFNGEQNTLMV)
+Alternatively you can use [this link](https://mam-explorer.firebaseapp.com/?provider=https://api.lb-0.h.chrysalis-devnet.iota.cafe&mode=public&root=YSTWK9RASUXFKNMYTCEJAIILZLBUXEETBOEOXRVQVZIHSTFZWYWJOICKODFCTCDPUKFMGJCTMADZUEIFW)
 
 #### Restricted message stream:
 
-* Root: `V9IHHZWYUVCQETYD9UFVWGDNFGQNCWAJ9XEOKHPQCBQHFZGQLJGMKYJ9IXPKFISFSGQYNVWNKPIBYQZLA`
-* Provider: `https://nodes.devnet.iota.org:443`
+* Root: `XKWJPJFCFCGEXVNOPAZCQPXHQHBUXLTSFFDWUCFEGE9HSJIGOJHDCI9YNRKUHZYDPZYQFDVMHLUCAOY9L`
+* Provider: `https://api.lb-0.h.chrysalis-devnet.iota.cafe`
+* Secret key: `9MOFBKDXPEKYFVFRCVNM9JZDTTNKSHZPNIWASVSGQFTGJAULQSJPEYAUFIRDDBVWVPD9KSP9CWETXFUZU`
 
-Alternatively you can use [this link](https://mam-explorer.firebaseapp.com/?provider=https://nodes.devnet.iota.org&mode=restricted&key=VERYSECRETKEY99999999999999999999999999999999999999999999999999999999999999999999&root=V9IHHZWYUVCQETYD9UFVWGDNFGQNCWAJ9XEOKHPQCBQHFZGQLJGMKYJ9IXPKFISFSGQYNVWNKPIBYQZLA)
+Alternatively you can use [this link](https://mam-explorer.firebaseapp.com/?provider=https://api.lb-0.h.chrysalis-devnet.iota.cafe&mode=restricted&key=9MOFBKDXPEKYFVFRCVNM9JZDTTNKSHZPNIWASVSGQFTGJAULQSJPEYAUFIRDDBVWVPD9KSP9CWETXFUZU&root=XKWJPJFCFCGEXVNOPAZCQPXHQHBUXLTSFFDWUCFEGE9HSJIGOJHDCI9YNRKUHZYDPZYQFDVMHLUCAOY9L)
 
 
 ### For developers
